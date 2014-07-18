@@ -1,0 +1,9 @@
+#!/usr/bin/php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+use IttyIt\CheckerBoard\CheckerBoardApplication;
+
+$checker = new CheckerBoardApplication();
+$status = $checker->execute();
