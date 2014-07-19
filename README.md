@@ -1,4 +1,4 @@
-checkboard
+checkerboard
 ==========
 A little cli program that displays to the console a checkerboard base on the number of rows and cols that is requested.
 ````ASCII
@@ -53,5 +53,5 @@ Column   : 3
 
 `./composer.phar install`
 
-#### Usage:
+#### Usage
 `./bin/checkerboard-drawer --cols [number] --rows [number]`
