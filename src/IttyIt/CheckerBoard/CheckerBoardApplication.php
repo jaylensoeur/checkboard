@@ -29,7 +29,9 @@ class CheckerBoardApplication
      */
     private function getUserOptions()
     {
-        $options = getopt(null,array(
+        $options = getopt(
+            null,
+            array(
                 "cols:",
                 "rows:"
             )
@@ -41,6 +43,7 @@ class CheckerBoardApplication
 
         return $options;
     }
+
     /**
      * @param CheckerBoard $checkBoard
      * @return void

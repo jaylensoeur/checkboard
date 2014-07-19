@@ -16,7 +16,7 @@ class CheckerBoard implements CheckerBoardInterface
      * @param int $columnNumber
      * @param int $rowNumber
      */
-    public function __construct($columnNumber = 4, $rowNumber = 4 )
+    public function __construct($columnNumber = 4, $rowNumber = 4)
     {
         $this->columnNumber = $columnNumber;
         $this->rowNumber = $rowNumber;
@@ -31,7 +31,7 @@ class CheckerBoard implements CheckerBoardInterface
 
         $length = $this->size * $this->rowNumber;
 
-        for($j = 0; $j < $this->columnNumber; $j++) {
+        for ($j = 0; $j < $this->columnNumber; $j++) {
 
             /**
              * construct top of checkerboard
@@ -43,7 +43,7 @@ class CheckerBoard implements CheckerBoardInterface
                  * don't fill square
                  * */
                 $string .= $this->buildSquare($length, $this->size, false);
-            }else {
+            } else {
                 /**
                  * fill square
                  * */
@@ -65,9 +65,9 @@ class CheckerBoard implements CheckerBoardInterface
     public function title()
     {
         $string = '';
-        $string .=  "Drawing checker board\n";
-        $string .= "Row      : ".$this->columnNumber."\n";
-        $string .=  "Column   : ".$this->rowNumber."\n";
+        $string .= "Drawing checker board\n";
+        $string .= "Row      : " . $this->columnNumber . "\n";
+        $string .= "Column   : " . $this->rowNumber . "\n";
 
         return $string;
     }
@@ -81,11 +81,10 @@ class CheckerBoard implements CheckerBoardInterface
     {
         $string = '';
 
-        for($i = 0; $i < $length+1; $i++)
-        {
+        for ($i = 0; $i < $length + 1; $i++) {
             if ($i % $size) {
                 $string .= "-";
-            }else {
+            } else {
                 $string .= "+";
             }
         }
@@ -131,23 +130,22 @@ class CheckerBoard implements CheckerBoardInterface
 
         $counter = 0;
 
-        for($i = 0; $i < $length; $i++)
-        {
-            if ($i == 0 ) {
+        for ($i = 0; $i < $length; $i++) {
+            if ($i == 0) {
                 $string .= "|";
             }
 
-            if ($counter < $size-1) {
+            if ($counter < $size - 1) {
                 $string .= $shape1;
-            }else {
+            } else {
                 $string .= "|";
             }
 
             $counter++;
 
             if ($counter == $size) {
-               $counter = 0;
-               $this->swap($shape1, $shape2);
+                $counter = 0;
+                $this->swap($shape1, $shape2);
             }
         }
 
