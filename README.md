@@ -1,6 +1,6 @@
 checkerboard
 ==========
-A little cli program that displays to the console a checkerboard base on the number of rows and cols that is requested.
+A little cli program that displays to the console a checkerboard based on the number of rows and cols.
 ````ASCII
 Drawing checker board
 Row      : 6
