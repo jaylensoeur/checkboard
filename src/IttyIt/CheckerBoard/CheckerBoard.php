@@ -10,7 +10,7 @@ class CheckerBoard implements CheckerBoardInterface
     private $rowNumber;
 
     /** @var int $size */
-    private $size = 5;
+    private $size = 6;
 
     /**
      * @param int $columnNumber

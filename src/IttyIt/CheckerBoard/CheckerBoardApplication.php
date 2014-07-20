@@ -37,8 +37,12 @@ class CheckerBoardApplication
             )
         );
 
-        if (!isset($options['cols']) || !isset($options['rows'])) {
+        if (!isset($options['cols']) || !isset($options['rows']) ) {
             throw new \Exception("Usage: checkerboard-drawer --cols [number] --rows [number] \n");
+        }
+
+        if (!is_numeric(($options['cols'])) || !is_numeric(($options['rows']))) {
+            throw new \Exception("Not a number!\nUsage: checkerboard-drawer --cols [number] --rows [number] \n");
         }
 
         return $options;
