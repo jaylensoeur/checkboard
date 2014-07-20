@@ -46,7 +46,7 @@ class CheckerBoardApplication
         }
 
         if ($options['cols'] > 20 || $options['rows'] > 20) {
-            throw new \Exception("Doesn't have to be that large! --cols 20 and --rows 20 is big enought\nUsage: checkerboard-drawer --cols [number] --rows [number] \n");
+            throw new \Exception("Doesn't have to be that large: --cols 20 and --rows 20 is big enough\nUsage: checkerboard-drawer --cols [number] --rows [number] \n");
         }
 
         return $options;
